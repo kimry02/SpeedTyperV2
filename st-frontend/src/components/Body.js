@@ -27,8 +27,6 @@ const Body = (props) => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
 
     useEffect(() => {
-        const token = user?.token;
-
         setUser(JSON.parse(localStorage.getItem('profile')));
     }, [location])
 
@@ -58,7 +56,7 @@ const Body = (props) => {
                 navigate('/')
             }
         }
-    },[finishedStatus, cwpm])
+    },[finishedStatus, cwpm, dispatch, navigate, user])
 
     function getQuote() {
         return fetch('https://api.quotable.io/random')

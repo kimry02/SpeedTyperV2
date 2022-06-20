@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
 body {
     background-color: #012946;
-
+    font-family: 'Kosugi Maru', sans-serif;
 }
 
 .correct {

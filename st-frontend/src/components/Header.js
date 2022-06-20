@@ -9,8 +9,6 @@ const Header = (props) => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
 
     useEffect(() => {
-        const token = user?.token;
-
         setUser(JSON.parse(localStorage.getItem('profile')));
     }, [location])
 
